@@ -1,0 +1,49 @@
+#light_box_container {
+	height:600px;
+	width:600px;
+	display:inline-block;
+	position:absolute;
+	left: 400px;
+	margin-right:35px;
+	border-right:1px solid black;
+	border-top:1px solid black;
+	}
+	
+.unit {
+	display:inline-block;
+	float:left;
+	padding:0px;
+	margin:0;
+	border-bottom:1px solid black; 
+	border-left: 1px solid black;
+	position:relative;
+	}
+	
+#option_menu {
+	height:600px;
+	width: 300px;
+	background-color:#F0F0F0;
+	display:inline-block;
+	float:right;
+	right:200px;
+	position:relative;
+	}
+#popular_colors {
+	padding-left:15px;
+	}
+.fav_color {
+	display:inline-block;
+	margin-top:15px;
+	height:30px;
+	width:30px;
+	}
+#grid_create {
+		display:inline-block;
+		position:relative;
+		left:115px;
+		}
+		
+p{
+	font-size:22px;
+	}
+	//*{border:1px solid red}
