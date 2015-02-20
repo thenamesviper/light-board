@@ -4,44 +4,34 @@
 	display:inline-block;
 	position:absolute;
 	left: 400px;
-	margin-right:35px;
-	border-right:1px solid black;
+	padding:none;
 	border-top:1px solid black;
 	}
 	
 .unit {
 	display:inline-block;
 	float:left;
-	padding:0px;
+	padding:0;
 	margin:0;
 	border-bottom:1px solid black; 
 	border-left: 1px solid black;
 	position:relative;
 	}
+.right-border {
+	border-right:1px solid black;
+	}
 	
 #option_menu {
-	height:600px;
+	height:200px;
 	width: 300px;
 	background-color:#F0F0F0;
 	display:inline-block;
 	float:right;
 	right:200px;
 	position:relative;
+	text-align:center;
 	}
-#popular_colors {
-	padding-left:15px;
-	}
-.fav_color {
-	display:inline-block;
-	margin-top:15px;
-	height:30px;
-	width:30px;
-	}
-#grid_create {
-		display:inline-block;
-		position:relative;
-		left:115px;
-		}
+
 		
 p{
 	font-size:22px;

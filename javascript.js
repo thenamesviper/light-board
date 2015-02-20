@@ -14,7 +14,7 @@ $(document).ready(function() {
 	
 	
 	
-	function createGrid(numHorizontal, numVertical) {
+	function createGrid(numHorizontal, numVertical, operator) {
 		if(Number.isInteger(numHorizontal) && Number.isInteger(numVertical) && //check for int x | 0<x<100
 			numHorizontal>0 && numVertical<=100 &&numVertical>0 && numVertical<=100){
 	
@@ -35,15 +35,41 @@ $(document).ready(function() {
 		} else {
 			alert("Please pick integers between 1 and 99");
 		}
-	
+		
+		if(operator == "strobe") {
+			strobe();
+		}else {
+			draw();
+		}
 	}
+	function draw() {
+		$(".unit").mousedown(function() { 
+		$(".unit").hover(function() {
+			$(this).css("background-color", $color);
+			})
+			}).mouseup(function() {
+			$(".unit").unbind("mouseenter mouseleave");
+			});
+	}
+	function strobe() {
+		$(".unit").on({
+			mouseenter: function() {
+				$(this).css("background-color", $color);
+				},
+			mouseleave: function() {
+				$(this).css("background-color", "white");
+			
+		}});
+	}
+		
 	$("#grid_create").click(function() {
 		$("#light_box_container").empty();
 		var row = parseInt($("#rows").val(),10);
 		var column = parseInt($("#columns").val(),10);
-		createGrid(row, column);
+		var $operator = $(":radio:checked").val();
+		createGrid(row, column, $operator);
 		});
-	createGrid(45,45);	
+	createGrid(45,45, "strobe");	
 	
 	$("#fill_all").click(function() {
 		$(".unit").css("background-color", $color);
@@ -52,20 +78,6 @@ $(document).ready(function() {
 	//function setColor() 
 	$("#reset").click(function() {
 		$(".unit").css("background-color", "white");
-		});
-	
-	$(".unit").mousedown(function() { 
-		$(".unit").hover(function() {
-			$(this).css("background-color", $color);
-			})
-			}).mouseup(function() {
-			$(".unit").unbind("mouseenter mouseleave");
-			});
-				
-	
-
-		
+	})
 });
-	
-	
 	
