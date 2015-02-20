@@ -1,2 +1,0 @@
-function createGrid(length, width) {
-	

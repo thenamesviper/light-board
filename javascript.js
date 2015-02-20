@@ -63,14 +63,7 @@ $(document).ready(function() {
 			});
 				
 	
-	
-/*	$(".unit").hover(function() {
-		$(this).css("background-color", $color);	},
-		function() {
-		$(this).css("background-color", "white");
-		});
-		
-	*/
+
 		
 });
 	
